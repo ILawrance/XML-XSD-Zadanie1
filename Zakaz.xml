@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="SchemaZakazov.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<Zakaz>
+    <Book>
+        <Author>Anton</Author>
+        <Name>Bogatiy Papa Bedniy Papa</Name>
+        <DateOfRelease>2008-02-29</DateOfRelease>
+    </Book>
+    <DateOfPurch>2023-02-21</DateOfPurch>
+    <ClientFIO>A.F.V.</ClientFIO>
+</Zakaz>

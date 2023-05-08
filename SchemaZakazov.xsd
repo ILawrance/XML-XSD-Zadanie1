@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Zakaz">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Book" type="Book" maxOccurs="unbounded" minOccurs="1"> </xs:element>
+                <xs:element name="DateOfPurch" type="xs:date" maxOccurs="unbounded" minOccurs="1"> </xs:element>
+                <xs:element name="ClientFIO" maxOccurs="1" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[A-Z][.   ][A-Z][.   ][A-Z][.   ]"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Book">
+        <xs:sequence>
+            <xs:element name="Author" type="xs:string" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Name" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+            <xs:element name="DateOfRelease" type="xs:date" maxOccurs="1" minOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
